@@ -1,0 +1,169 @@
+##########
+#vim-tips#
+##########
+
+
+### if you know more than that feel free to pull request your additions :)
+
+
+#!!! prerequisite !!!#
+
+have an overview idea about vim and how it works e.g. vim modes :/ 
+
+###open file 
+
+if you sure that your cursor on the beginning of file and need open it on a specific line number => vim FILE_NAME + LINE_NUMBER
+e.g. vim a.text +16  (no space between + and number => +16)
+
+
+if want to open with cursor on last line of the file => vim FILE_NAME + 
+
+
+### movements 
+
+hjkl = left,down,up,right (normal mode) (can add numbers e.g. 3l => move 3 letters right )
+
+0 => go to beginning of line 
+
+$ => go to end of line 
+
+G => go to end of file 
+
+gg => beginning of file 
+
+H => top of page 
+
+M => middle of page 
+
+:100 => go to line 100 
+
+% => if you have two corresponding brackets e.g. { anything } get your cursor on one of them press % take you to the another one  
+
+### delete 
+
+dd => delete line (can use number 3dd => delete three lines)
+
+dw => delete word (can use number 3dw => delete three words) (if you in the beginning of the word ) 
+
+dl => delete letter (can use number 3dl => delete 3 letters )
+
+:g/^\s*$/d => delete all blank line 
+
+
+### change 
+
+cw => change word 
+
+cl => change letter 
+
+ci" => change what inside of " " you currently in 
+
+ci{ => change what inside of { } you currently in
+
+xp => mix up position of two characters together 
+
+u => undo 
+
+ctrl + r => redo
+
+### quit
+
+:wq => write and quit 
+
+:q! => quit without saving 
+
+ZZ => write and quit 
+
+ZQ => quit without saving
+
+### insert
+
+i => insert before cursor 
+
+a => insert after cursor 
+
+I => insert at beginning of line 
+
+A => insert at end of line 
+
+### yank and paste 
+
+yy => yank a line (can use number)
+
+yw => yank a word 
+
+yl => yank a letter
+
+p => paste
+
+### visual mode 
+
+v => visual letter by letter 
+
+V => visual by line 
+
+ctrl + v => visual by block 
+
+vi" => visual inside " " 
+
+vip => select the whole paragraph
+
+### search
+
+/WORD => search and highlight in the file the word you searched for 
+
+n => to navigate search occurence forward
+
+N => navigate backward 
+
+:noh =>  removes highlight from last searh 
+
+* => go with cursor on word you want to search it other occurences in file press * (use n and N for navigate)
+
+/FIRST_WORD\ SECOND_WORD => search for two word 
+
+### substitute 
+
+:s/OLD_WORD/NEW_WORD/g => s -> substitute , g -> globally to apply sub to whole file 
+
+### file explorer 
+
+:EX => open file explorer ( cover whole current file )
+
+:Sex => split screen horizontal between current file and file explorer
+
+:Sex! => split but vertically 
+
+### open new file 
+
+:e FILE_NAME  => open a new file 
+
+### split screen for many files
+
+:sp FILE_NAME => split screen for open two files (horizontal) 
+
+:vs FILE_NAME => split screen (vertical) 
+
+### rename 
+
+:sav NEW_NAME => rename a file (didn't remove old file , it take a copy and rename it with a new name )
+
+### shell commands
+
+!! COMMAND => print output of command in your current file e.g. !!date , !!ls , !!pwd
+
+### simple sort 
+
+select what you wnat to be sorted and !sort => will be sorted. 
+
+### change path 
+
+:w NEW_PATH => move file to a new path you write  
+
+### add indentation 
+
+select + >  => add indent to right
+
+select + <  => add indent to left
+
+
